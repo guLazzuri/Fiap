@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Multiplicação: " + resultadoMultiplicacao);
 
         double resultadoDivisao = Calculadora.divisao(10, 5);
-        System.out.println("Divisão: " + resultadoDivisao);
+        System.out.println("Divisão " + resultadoDivisao);
     }
 }
 

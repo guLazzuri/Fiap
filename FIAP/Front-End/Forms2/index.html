@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fomr - HTML</h1>
+    <form action="cadastro" method="get">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="idnome">Nome</label>
+        <input autocomplete="off" autofocus type="text" name="nome" id="idnome"><br>
+        <label for="idsenha">Senha</label>
+        <input type="passaword" name="senha" id="idsenha" maxlength="6"><br>
+     </fieldset>
+     <fieldset>
+         <legend>Pagamento</legend>
+        <input type="radio" name="pagamento" id="iddebito" value="deb">
+        <label for="iddebito">Debito</label>
+        <input type="radio" name="pagamento" id="idcredito" value="cred">
+        <label for="idcredito">Credito</label>
+        <input type="radio" name="pagamento" id="idpix" value="pix">
+        <label for="idpix">Pix</label>
+    </fieldset>
+        <legend>Curso</legend>
+        <input type="checkbox" name="curso" id="idhtml" value="html">
+        <label for="idhtml"></label>
+        <input type="checkbox" name="curso" id="idcss" value="css">
+        <label for="idcss">CSS3</label>
+        <input type="checkbox" name="curso" id="idjs" value="js">
+        <label for="idjs">Javascrispt</label>
+    </fieldset>
+    <fieldset>
+        <legend>Local da Prova</legend>
+        <label for="idestado">Estado</label>
+        <select name="estado" id="idestado">
+            <optgroup label="Sudeste">
+            <option>SP</option>
+            <option>Rj</option>
+            <option>MG</option>
+            <option>ES</option>
+        </optgroup>
+        <optgroup><label for="sul"></label>
+            <option value="Rs">Rio Grande Do Sul</option>
+            <option value="Pr">Parana</option>
+        </optgroup>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Observacoes</legend>
+        <textarea name="obs" id="idobs" cols="30" rows="10"></textarea>
+      </fieldset>
+      <input type="submit" value="Cadastrar">
+      <input type="reset" value="Limpar">
+      <input type="button" value="Mudar">
+      <input type="file" name="doc" id="iddoc">
+      <input type="color" name="cor" id="idcor">
+    <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>

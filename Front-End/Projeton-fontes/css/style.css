@@ -1,0 +1,61 @@
+
+h1{text-align: center;
+    text-decoration: underline rgb(255, 255, 255) double;
+    color: rgb(0, 0, 0);
+    background-color: royalbue;
+}
+
+.paragrafo1{text-align: justify;
+text-transform: uppercase;
+}
+
+.paragrafo2{text-align: right;}
+
+
+.paragrafo3 {
+    line-height: 24px;
+    letter-spacing: 3px;
+    word-spacing: 40;
+    }
+.boxe1 {
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    border: 5px solid green;
+    padding: 5px ;
+    margin: 20px auto;
+    box-shadow: 5px 5px 2px  grey;
+space
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+.boxe2 {
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    border: 5px solid green;
+    padding: 5px ;
+    margin: 20px auto;
+box-shadow: 5px 5px 2px  grey;}
+
+.boxe1{
+    box-sizing: border-box;
+}
+
+.boxe2{
+    box-sizing: content-box;
+}
+a{
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 3px;
+
+}
+
+a:hover{
+    background-color: brown;
+}

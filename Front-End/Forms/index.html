@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms - HTML5 </h1>
+
+    <form action="" method="get">
+        <fieldset>
+            <legend> Dados Pessoais</legend>
+
+            <label for="idnome">Nome:</label>
+            <input type="text" name="Nome" id="idnome"><br>
+    
+            <label for="idemaol">E-Mail</label>
+            <input type="text" name="Email" id="idemaol"><br> 
+
+            <label for="idSite">Busca</label>
+            <input type="search" name="Busca" id="idSite"><br>
+
+            <label for="idbuscsa">Site: </label>
+            <input type="url" name="Site" id="idbuscsa"><br>
+
+            <label for="idcel">Celular: </label>
+            <input type="tel" name="celular" id="idcel"><br>
+
+            <label for="idata">Data: </label>
+            <input type="date" name="Data" id="idata"><br>
+
+            <label for="idhora">Hora: </label>
+            <input type="time" name="Hora" id="idhora"><br>
+
+            <label for="idreuniao">Reuniao: </label>
+            <input type="datetime-local" name="Reuniao" id="idreuniao"><br>
+
+            <label for="idmes">Mes: </label>
+            <input type="month" name="Mes" id="idmes"><br>
+
+            <label for="idsem">Semana: </label>
+            <input type="week" name="Semana" id="idsem"><br>
+
+            <label for="idvalor">Valor</label>
+            <input type="number" name="valor"  id="idvalor" min="0" max="100" step="0.1"><br>
+            
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Cor de Roupas</legend>
+            <input type="radio" name="Estado" id="EstadoSp" value="SP">
+            <label for="EstadoSp">SP</label>
+
+            <input type="radio" name="Estado" id="RJ" value="RJ">
+            <label for="RJ">rj</label>
+            
+            <input type="radio" name="Estado" id="PR" value="PR">
+            <label for="PR">PR</label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Tamanhos de Roupas</legend>
+            <input type="radio" name="Tamanhos" id="idP" value="P">
+            <label for="idP">P</label>
+
+            <input type="radio" name="Tamanhos" id="idM" value="M">
+            <label for="idM">M</label>
+            
+            <input type="radio" name="Tamanhos" id="idG" value="G">
+            <label for="idG">G</label>
+            
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Cor de Roupas</legend>
+            <input type="radio" name="Cor" id="idVerde" value="Verde">
+            <label for="idVerde">Verde</label>
+
+            <input type="radio" name="Cor" id="idPreto" value="Perto">
+            <label for="idPreto">Preto</label>
+            
+            <input type="radio" name="Cor" id="idBranco" value="Branco">
+            <label for="idBranco">Bramco</label>
+            
+
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Observação</legend>
+            <textarea name="obs" id="idobs" cols="30" rows="10"></textarea>
+
+        </fieldset>
+
+        <input type="Submit" value="Enviar">
+    
+
+
+    </form>
+
+
+
+   
+</body>
+</html>

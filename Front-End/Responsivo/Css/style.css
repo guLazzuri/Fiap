@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 90%;
+}
+
+.box1{
+    background-color: aquamarine;
+    border: 3px solid blue;
+    width: 80vw;
+    min-height: 10vw;
+    padding: 15px;
+    font-size: 20px;
+}
+.box2{
+    border: 3px solid red;
+    background-color:brown;
+    width: 100vw;
+    min-height: 10vw;
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+p{
+    /*font-size: 1.5em; 1.5* 16px (padrao da pagina HTML)*/
+    font-size: 1.5em;
+
+}
+
+/*Html{
+    font-size: 1.5em;
+}*/
+
+img{
+    width: 700px;
+    max-width: 70%;
+
+
+}
+

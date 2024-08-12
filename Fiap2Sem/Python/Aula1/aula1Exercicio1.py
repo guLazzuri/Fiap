@@ -3,12 +3,13 @@ def menu():
     print("""
     0 - SAIR
     1 - Adicionar ALUNO
-    2 - Editar Aluno | Nota
+    2 - Editar noat de Aluno 
     3 - Listar alunos 
     4 - Excluir aluno
     5 - Calcular media da turma 
     6 - Consultar os alunos 
     7 - Apagar todos os alunos
+    8 - Press to continue
 """)
     
 def AdcAluno(dic1):
@@ -52,11 +53,16 @@ def RemAlunos(dic1):
             
 
 def CalAlunosMedia(dic1):
-    if dic1:
-        media = sum(aluno['nota'] for aluno in dic1) / len(dic1)
-        print(f"Media da turma: {media:.2f}")
-    else:
-        print("Não há alunos para calcular a media")
+    #if dic1:
+     #   media = sum(aluno['nota'] for aluno in dic1) / len(dic1)
+    #    print(f"Media da turma: {media:.2f}")
+    #else:
+    #   print("Não há alunos para calcular a media")
+    soma = 0
+    for nota in dic1['nota'].values():
+        soma += nota
+        media = soma / len(notas)
+        print(media)
 
 def ConsultAlunos(dic1):
     nome =input("Nome do aluno que deseja consultar: ")
@@ -74,6 +80,13 @@ def Apagaralunos(dic1):
     dic1.clear()
     print("Todos os alunos foram apagados.")
 
+
+def Mnessagem(msg):
+    tamanho = len(msg)
+    print('-'*tamanho)
+    print(msg)
+    print('-'*tamanho)
+
 ############################################################################################################
 
 
@@ -87,21 +100,30 @@ while continuar:
         case 0:
             continuar = False
         case 1:
+            Mnessagem("Cadastrar Aluno")
             AdcAluno(dic1)
         case 2:
+            Mnessagem("Consultar Aluno")
             EditAluno(dic1)  
         case 3: 
+            Mnessagem("Editar Aluno")
             ListAlunos(dic1)
         case 4: 
+            Mnessagem("Remover Alunos")
             RemAlunos(dic1)
         case 5:
+            Mnessagem("Calcular a Media da Sala")
             CalAlunosMedia(dic1)
         case 6:
+            Mnessagem("Consultar Alunos")
             ConsultAlunos(dic1)
         case 7:
+            Mnessagem("Apagar alunos")
             Apagaralunos(dic1)
         case _:
             print("Opção inválida. Tente novamente.")
+        
+            
 
 
     

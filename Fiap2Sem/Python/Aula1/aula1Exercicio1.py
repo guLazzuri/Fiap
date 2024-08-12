@@ -5,7 +5,7 @@ def menu():
     1 - Adicionar ALUNO
     2 - Editar Aluno | Nota
     3 - Listar alunos 
-    4 - Excluir alunos 
+    4 - Excluir aluno
     5 - Calcular media da turma 
     6 - Consultar os alunos 
     7 - Apagar todos os alunos
@@ -105,6 +105,7 @@ while continuar:
 
 
     
+
 
 
 

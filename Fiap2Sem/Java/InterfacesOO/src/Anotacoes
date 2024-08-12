@@ -1,0 +1,36 @@
+
+07 de agosto 2024
+
+Entidades
+ - descreve as abstracoes de algo do mundo real;
+ - possui atributos e metodos, contrutores, getters, setters e toString
+
+ _EntidadeBase ('_' para classes abstratas)
+ - caracteristicas do sistema
+ - normalmente coloca-se data de criacao, data de atualizacao e um boolean para deletado
+
+Repositorios
+- CRUD (create, read, update, delete)
+- para gerenciar infos das entidades - criar, listar, atualizar, e deletar
+
+Interface Genérica
+- métodos genéricos para  fazer CRUD
+
+
+12 de agosto 2024
+
+Repositorio base - interface genérica:
+- para nao precisar ficar fazendo mil vezes o CRUD em cada repositorio
+- pode usar o default para implementar os metodos mas nao é ideal, toma muita memoria
+
+Repositorio base Impl:
+- para implementar os metodos do repositorio base
+- é abstrata, nao pode ser instanciada
+
+Pacote de servicos:
+ - para instanciar os  repositorios main
+ - são classes que contêm a lógica de negócio da aplicação
+ - como acessar o banco de dados, processar informações ou interagir com APIs externas
+
+ DICA: Free Code Camp - Youtube
+  - Full Stack Development with Java Spring boot, React, e MongoDB (basicamente tudo do 2o SEM)

@@ -51,18 +51,17 @@ def RemAlunos(dic1):
     if not encontrado:
         print("Aluno não encontrado")
             
-
 def CalAlunosMedia(dic1):
-    #if dic1:
-     #   media = sum(aluno['nota'] for aluno in dic1) / len(dic1)
-    #    print(f"Media da turma: {media:.2f}")
-    #else:
-    #   print("Não há alunos para calcular a media")
-    soma = 0
-    for nota in dic1['nota'].values():
-        soma += nota
-        media = soma / len(notas)
-        print(media)
+    if dic1:
+        media = sum(aluno['nota'] for aluno in dic1) / len(dic1)
+        print(f"Media da turma: {media:.2f}")
+    else:
+       print("Não há alunos para calcular a media")
+
+    #soma = 0
+    #for nota in notas.values():
+    #soma += nota
+    #media = soma / len(notas)
 
 def ConsultAlunos(dic1):
     nome =input("Nome do aluno que deseja consultar: ")
@@ -79,7 +78,6 @@ def ConsultAlunos(dic1):
 def Apagaralunos(dic1):
     dic1.clear()
     print("Todos os alunos foram apagados.")
-
 
 def Mnessagem(msg):
     tamanho = len(msg)

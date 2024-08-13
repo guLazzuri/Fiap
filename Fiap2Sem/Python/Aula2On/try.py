@@ -17,3 +17,7 @@ except ValueError:
 except:
     LimaprTela()
     print("Erro ao digitar os valores")
+else:
+    print("Resultado exibido!!")
+finally:
+    print("Fim do programa!!")

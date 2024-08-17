@@ -9,7 +9,6 @@ def menu():
     
 """)
     
-
 def CadastrarCadastros(tabela):
     pessoa = {
         'Nome': input("Nome:"),
@@ -24,58 +23,48 @@ def ConsultarRegistros(tabela):
     cpfConsultar = input("Qual cpf da consulta: ")
     for pessoa in tabela:
         if pessoa['cpf'] == cpfConsultar:
-            print(f"Nome: " + tabela[pessoa['nome']])
-            print(f"cpf: " + tabela[pessoa['cpf']])
-            print(f"idade: " + tabela[pessoa['idade']])
+            print(f"Nome: " + {pessoa['nome']})
+            print(f"cpf: " + {pessoa['cpf']})
+            print(f"Idade: " + {pessoa['idade']})
 
 def listarRegistros(tabela):
+    if not tabela:
+        print("Nenhum registro encontrado!")
+    
     for cpf in tabela:
         print(f"NOME: {pessoa['nome']}, CPF: {pessoa['cpf']}, Idade: {pessoa['idade']} ")
 
+
 def EditarRegistros(tabela):
-    num = int(print("""
-    Como voce deseja fazer a busca:
-    1 - Nome
-    2 - CPF
-    """))
-    if num == 2: 
-        Consultar = input("Qual cpf da consulta: ")
-        for pessoa in tabela:
-            if tabela[pessoa['cpf']] == Consultar:
-                num1 = int(print("""
-Qual voce deseja modficar:
-1 - Nome
-2 - CPF
-3 - Idade"""))
-                if num1 == 1:
-                    pessoa['nome'] = input("Novo Nome: ")
-                if num1 == 2:
-                    pessoa['cpf'] = input("Novo CPF: ")
-                if num1 == 1:
-                    pessoa['idade'] = input("Nova Idade: ")
-    if num == 1: 
-        Consultar = input("Qual nome da consulta: ")
-        for pessoa in tabela:
-            if tabela[pessoa['nome']] == Consultar:
-                num1 = int(print("""
-Qual voce deseja modficar:
-1 - Nome
-2 - CPF
-3 - Idade """))
-                if num1 == 1:
-                    pessoa['nome'] = input("Novo Nome: ")
-                if num1 == 2:
-                    pessoa['cpf'] = input("Novo CPF: ")
-                if num1 == 1:
-                    pessoa['idade'] = input("Nova Idade: ")
+    cpfConsultar = input("Qual CPF deseja editar: ")
+    for pessoa in tabela:
+        if pessoa['cpf'] == cpfConsultar:
+            print("Registro encontrado.")
+            print("O que deseja modificar:")
+            print("1 - Nome")
+            print("2 - CPF")
+            print("3 - Idade")
+            opcao = int(input("Escolha uma opção: "))
+            if opcao == 1:
+                pessoa['nome'] = input("Novo nome: ")
+            elif opcao == 2:
+                pessoa['cpf'] = input("Novo CPF: ")
+            elif opcao == 3:
+                pessoa['idade'] = int(input("Nova idade: "))
+            else:
+                print("Opção inválida.")
+            print("Registro atualizado com sucesso.")
+            return
+    print("Registro não encontrado.")
 
 def Excluir(tabela):
-    if num == 2: 
-        Consultar = input("Qual cpf da consulta: ")
-        for pessoa in tabela:
-            if tabela[pessoa['cpf']] == Consultar:
-                tabela.remove(tabela)
-                print("Pessoa apagada com sucesso")
+    cpfExcluir = input("Qual CPF deseja excluir: ")
+    for pessoa in tabela:
+        if pessoa['cpf'] == cpfExcluir:
+            tabela.remove(pessoa)
+            print("Registro excluído com sucesso.")
+            return
+    print("Registro não encontrado.")
 
 
 #################################################################################################################################################
@@ -86,7 +75,7 @@ continuar = True
 while continuar:
     menu()
     escolha = int(input("Escolha: "))
-    match num:
+    match escolha:
         case 0:
             continuar = False
         case 1: 
@@ -101,3 +90,4 @@ while continuar:
             Excluir(tabela)
         case _:
             print("Opcao Invalidar")
+        

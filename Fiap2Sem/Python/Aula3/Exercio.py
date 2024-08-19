@@ -61,7 +61,7 @@ def Excluir(tabela):
     cpfExcluir = input("Qual CPF deseja excluir: ")
     for pessoa in tabela:
         if pessoa['cpf'] == cpfExcluir:
-            tabela.remove(pessoa)
+            tabela.pop(pessoa)
             print("Registro excluído com sucesso.")
             return
     print("Registro não encontrado.")

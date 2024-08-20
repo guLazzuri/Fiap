@@ -1,0 +1,11 @@
+-> Apresentação do Leo sobre o paper do CiV ser Turing-Completo
+
+Para próxima reunião:
+    - Vamos fazer uma revisão de Máquina de Turing
+    - Técnicas de demonstração
+
+Para reuniões seguintes:
+    - Relatar resultado do CiV em texto no formato da dissertação
+    (como introdução às técnicas)
+    Escrever em detalhes o resultado para o Civ:BE. Para os outros pode
+    apenas relatar de maneira indireta, dizendo que são construções similares.

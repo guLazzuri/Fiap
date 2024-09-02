@@ -1,0 +1,10 @@
+11:00:22.472 [main] INFO  org.example.Main - MusicRepository: 
+11:02:11.706 [main] INFO  org.example.Main - MusicRepository: 
+11:04:33.558 [main] INFO  org.example.Main - MusicRepository: 
+11:29:46.904 [main] INFO  org.example.entities.Music - inicializando
+11:29:46.911 [main] INFO  org.example.entities.Artist - inicializando
+11:29:46.912 [main] INFO  org.example.entities.Artist - inicializando
+11:29:46.916 [main] INFO  org.example.entities.Music - Create: Music{title='Music 1', album=null} _BaseEntity{id=1}
+11:29:46.916 [main] INFO  org.example.entities.Music - ReadAll: null
+11:29:46.917 [main] INFO  org.example.entities.Artist - Create: Artist{name='Artist 1', albums=[]} _BaseEntity{id=1}
+11:29:46.917 [main] INFO  org.example.entities.Artist - ReadAll: null

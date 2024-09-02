@@ -1,0 +1,8 @@
+10:04:28.549 [main] INFO  org.example.Main - This is an info log message.
+10:04:28.554 [main] ERROR org.example.Main - This is an error log message.
+10:05:58.180 [main] INFO  org.example.Main - This is an info log message.
+10:05:58.186 [main] ERROR org.example.Main - This is an error log message.
+2024-08-29 10:38:05 INFO  Main:26 - MusicRepository: [Music{title='Music 1', album=null} _BaseEntity{id=1}]
+2024-08-29 10:38:07 INFO  Main:26 - MusicRepository: [Music{title='Music 1', album=null} _BaseEntity{id=1}]
+2024-08-29 10:39:52 INFO  Main:26 - MusicRepository: [Music{title='Music 1', album=null} _BaseEntity{id=1}]
+2024-08-29 10:44:54 INFO  Main:26 - MusicRepository: [Music{title='Music 1', album=null} _BaseEntity{id=1}]

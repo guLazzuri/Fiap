@@ -1,0 +1,40 @@
+/* src/components/Propagandas.css */
+
+.section {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.title h1 {
+    color: black;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    justify-content: left;
+}
+
+.ad-container {
+    display: flex;
+    justify-content: center; /* Alinha os anúncios ao centro */
+    gap: 20px; /* Espaçamento entre os anúncios */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+}
+
+.ad1, .ad2 {
+    flex: 1;
+    margin: 10px;
+}
+
+.ad1 h3, .ad2 h3 {
+    color: black;
+    margin-bottom: 10px; /* Espaço abaixo do título do anúncio */
+}
+
+/* Aqui ajustamos ambas as imagens para terem o mesmo tamanho fixo */
+.ad1 img, .ad2 img {
+    max-width: 400px;  /* Define uma largura fixa para ambas as imagens */
+    max-height: 400px; /* Define uma altura fixa para garantir que sejam do mesmo tamanho */
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem seja ajustada sem distorção */
+}
+

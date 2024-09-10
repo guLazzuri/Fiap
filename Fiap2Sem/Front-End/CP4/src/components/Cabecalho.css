@@ -1,0 +1,41 @@
+/* src/components/Cabecalho.css */
+
+.header {
+    width: 100%;
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border: 0;
+}
+
+.header ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex;
+    justify-content: center; /* Alinha os itens ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.header li {
+    margin: 0 20px; /* Espaçamento entre os itens (ajustado para 20px) */
+}
+
+.header img {
+    max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.header button {
+    background-color: #ffffff; /* Cor do botão */
+    border: none;
+    padding: 10px 20px;
+    color: #050c4b;
+    cursor: pointer;    
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.header button:hover {
+    background-color: #f0f0f0; /* Cor do botão ao passar o mouse (ajustada) */
+}

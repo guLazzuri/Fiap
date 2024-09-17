@@ -7,9 +7,9 @@ export default function Cabecalho() {
     return (
         <header className="header">
             <ul>
-                <li><img src={appleLogo} alt="Logo" /></li>
-                <li><h1>Loja Apple Lazzuri</h1></li>
                 <li><button>Logar</button></li>
+                <li className='imagem'><img src={appleLogo} alt="Logo"/></li>
+                <li><input type="search"/></li>
             </ul>
         </header>
     );

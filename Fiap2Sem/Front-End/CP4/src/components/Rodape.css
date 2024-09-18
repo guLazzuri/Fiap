@@ -1,0 +1,56 @@
+/* src/components/Rodape.css */
+
+/* Estilo para o rodapé */
+.footer {
+    display: flex; /* Define o rodapé como flexível para alinhamento dos itens internos */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    background-color: black; /* Cor de fundo do rodapé */
+    padding: 20px; /* Espaçamento interno do rodapé */
+    border-top: 1px solid #444; /* Borda superior do rodapé */
+    margin-top: 100px;
+}
+
+/* Estilo para o contêiner do conteúdo do rodapé */
+.footer > div {
+    display: flex; /* Define o contêiner como flexível */
+    justify-content: space-between; /* Distribui os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin-bottom: 20px; /* Espaço abaixo do contêiner */
+    height: 10px;
+}
+
+/* Estilo para a lista de navegação */
+.footer ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+    margin: 0; /* Remove o margin padrão da lista */
+    display: flex; /* Define a lista como flexível */
+}
+
+/* Estilo para cada item da lista de navegação */
+.footer li {
+    margin: 0 10px; /* Espaço horizontal entre itens */
+}
+
+/* Estilo para os links de navegação */
+.footer a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+}
+
+/* Estilo para o logo */
+.footer img {
+    max-width: 40px; /* Define a largura máxima das imagens como 40 pixels */
+    height: auto; /* Mantém a proporção da altura das imagens */
+}
+
+/* Estilo para o parágrafo de texto do rodapé */
+.texto-rodape {
+    color: #aaa; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte do texto */
+    text-align: center; /* Centraliza o texto */
+}

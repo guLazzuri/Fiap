@@ -1,58 +1,82 @@
 /* src/components/Cabecalho.css */
 
+/* Reseta margens e padding de todos os elementos e define box-sizing para border-box */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Para evitar que padding/margens afetem o tamanho dos elementos */
+    box-sizing: border-box;
 }
 
+/* Estilo principal do cabeçalho */
 .header {
-    width: 100%;
-    height: 100px;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: justify;
-    border: none; /* Remove qualquer borda */
+    width: 100%; /* O cabeçalho ocupa 100% da largura do contêiner pai */
+    height: 100px; /* Altura do cabeçalho */
+    background-color: #000000; /* Cor de fundo preta */
+    display: flex; /* Define o cabeçalho como um contêiner flexível */
+    justify-content: space-between; /* Distribui espaço entre os itens principais (logo, busca, e a parte direita) */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 0 20px; /* Adiciona padding nas laterais do cabeçalho */
 }
 
+/* Contêiner para o logo, posicionado à esquerda */
+.header .left {
+    display: flex; /* Define um contêiner flexível para alocar o logo */
+    align-items: center; /* Alinha o logo verticalmente ao centro */
+}
 
+/* Contêiner para o campo de busca, posicionado no meio */
+.header .middle {
+    flex: 1; /* Faz com que este contêiner ocupe o espaço restante */
+    display: flex; /* Define um contêiner flexível para o campo de busca */
+    justify-content: center; /* Centraliza o campo de busca horizontalmente */
+}
+
+/* Contêiner para os ícones de login e carrinho, posicionado à direita */
+.header .right {
+    display: flex; /* Define um contêiner flexível para alocar os ícones */
+    align-items: center; /* Alinha os ícones verticalmente ao centro */
+}
+
+/* Estilo da lista não ordenada no cabeçalho */
 .header ul {
     list-style: none; /* Remove os marcadores de lista */
     padding: 0; /* Remove o padding padrão */
     margin: 0; /* Remove a margem padrão */
-    display: flex;
-    justify-content: center; /* Alinha os itens ao centro */
-    align-items: center; /* Alinha verticalmente ao centro */
+    display: flex; /* Define a lista como um contêiner flexível */
+    align-items: center; /* Alinha os itens da lista verticalmente ao centro */
+    width: 100%; /* Faz com que a lista ocupe toda a largura disponível */
 }
 
-.imagem{
-    justify-content: center;
-}
-
-
-
+/* Estilo dos itens da lista */
 .header li {
-    margin: 0 10%; /* Espaçamento entre os itens (ajustado para 20px) */
+    margin: 0 10px; /* Adiciona margem horizontal de 10px entre os itens */
 }
 
-.header img {
-    max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+/* Estilo do logo */
+.header .logo img {
+    max-width: 100px; /* Define a largura máxima do logo como 100 pixels */
 }
 
-.header button {
-    background-color: #ffffff; /* Cor do botão */
-    border: none;
-    padding: 10px 20px;
-    color: #050c4b;
-    cursor: pointer;    
-    border-radius: 5px;
-    font-size: 16px;
+/* Estilo do campo de busca */
+.header .busca input {
+    width: 100%; /* Faz com que o campo de busca ocupe 100% da largura do contêiner pai */
+    max-width: 600px; /* Define a largura máxima para o campo de busca */
+    padding: 5px; /* Adiciona padding interno ao campo de busca */
+    border: 3px solid rgb(145, 145, 145); /* Define a cor e a espessura da borda */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    background-color: #ffffff; /* Define a cor de fundo do campo de busca */
+    color: #000000; /* Define a cor do texto no campo de busca */
 }
 
-.header button:hover {
-    background-color: #f0f0f0; /* Cor do botão ao passar o mouse (ajustada) */
+/* Estilo do campo de busca quando está em foco */
+.header .busca input:focus {
+    border-color: lightseagreen; /* Muda a cor da borda para verde quando o campo está em foco */
+    outline: none; /* Remove o contorno padrão do campo em foco */
+}
+
+/* Estilo das imagens de login e carrinho */
+.header .login img,
+.header .carrinho img {
+    max-width: 40px; /* Define a largura máxima das imagens como 40 pixels */
+    height: auto; /* Mantém a proporção da altura das imagens */
 }

@@ -8,14 +8,11 @@ import d50 from '../assets/50-off.png'; // Caminho atualizado para a imagem
 export default function Propagandas() {
     return (
         <section className="section">
-            <div className="title">
-                <h1>PROMOÇÕES</h1>
-            </div>
+            
 
             <div className="ad-container">
                 <div className="ad1">
                     <img src={desconto} alt="Desconto 50%" />
-                    <h3></h3>
                 </div>
 
                 <div className='ad2'>

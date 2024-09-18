@@ -1,0 +1,67 @@
+/* Estilo para o contêiner principal */
+.aparelhos {
+    display: flex; /* Define o contêiner como flexível para alinhamento dos itens internos */
+    flex-direction: column; /* Organiza os itens em uma coluna vertical */
+    align-items: center; /* Centraliza os itens horizontalmente dentro do contêiner */
+    width: 100%; /* Faz o contêiner ocupar toda a largura disponível do elemento pai */
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* Estilo para o título */
+.title {
+    font-size: 24px; /* Define o tamanho da fonte do título */
+    text-align: center; /* Centraliza o texto do título horizontalmente */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título para separar do conteúdo abaixo */
+}
+/* Estilo para a vitrine onde os aparelhos são exibidos */
+.vitrine {
+    display: flex; /* Define a vitrine como flexível para alinhamento dos itens internos */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+    gap: 20px; /* Define o espaço entre os itens da vitrine */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro da vitrine */
+    width: 100%; /* Faz a vitrine ocupar toda a largura disponível do contêiner pai */
+}
+
+/* Estilo para cada item individual na vitrine */
+.aa {
+    border: 3px solid grey; /* Adiciona uma borda cinza ao redor do item */
+    border-radius: 5px; /* Arredonda as bordas do item */
+    padding: 10px; /* Adiciona espaço interno ao redor do conteúdo do item */
+    text-align: center; /* Centraliza o texto dentro do item */
+    width: 220px; /* Define uma largura fixa para garantir que todos os itens tenham o mesmo tamanho */
+    display: flex; /* Define o item como flexível para organizar os itens internos */
+    flex-direction: column; /* Organiza os itens internos em uma coluna vertical */
+    align-items: center; /* Centraliza os itens internos horizontalmente */
+}
+
+/* Estilo para as imagens dos aparelhos */
+.aparelho img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner pai (.aa) */
+    height: 200px; /* Define uma altura fixa para todas as imagens, garantindo uniformidade */
+    object-fit: contain; /* Ajusta a imagem para que se encaixe dentro do contêiner sem cortar, mantendo a proporção */
+}
+
+/* Estilo para o nome e preço dos aparelhos */
+.nome, .preco {
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte do texto */
+    margin: 10px 0; /* Adiciona margem superior e inferior ao texto para espaçamento vertical */
+}
+
+/* Estilo específico para o preço dos aparelhos */
+.preco {
+    font-size: 14px; /* Define o tamanho da fonte especificamente para o preço */
+}
+
+/* Estilo para o botão de adicionar ao carrinho */
+button {
+    background-color: lightseagreen; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 3px; /* Adiciona bordas arredondadas ao botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão, indicando que é clicável */
+    margin-top: 10px; /* Adiciona espaço acima do botão para separação dos itens acima */
+    font-size: 14px; /* Define o tamanho da fonte do botão */
+    text-align: center; /* Centraliza o texto do botão */
+}

@@ -1,41 +1,33 @@
-/* src/components/Propagandas.css */
+/* src/components/Seção.css */
 
 .section {
-    width: 100%;
-    height: 500px;
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-    
+    width: 100%; /* Define a largura da seção como 100% do contêiner pai */
+    height: auto; /* A altura se ajusta automaticamente com base no conteúdo */
+    padding: 20px; /* Adiciona 20 pixels de espaço interno ao redor do conteúdo */
+    background-color: white; /* Define a cor de fundo como branca */
+    text-align: center; /* Centraliza o texto dentro da seção */
 }
 
-.title h1 {
-    max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
-    margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
-}
 
 .ad-container {
-    display: flex;
-    justify-content: center; /* Alinha os anúncios ao centro */
-    gap: 20px; /* Espaçamento entre os anúncios */
-    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    display: flex; /* Define o contêiner de anúncios como um contêiner flexível */
+    justify-content: center; /* Alinha os anúncios horizontalmente ao centro */
+    gap: 20px; /* Adiciona um espaçamento de 20 pixels entre os anúncios */
+    flex-wrap: wrap; /* Permite que os anúncios quebrem para a linha seguinte se não houver espaço suficiente */
 }
 
 .ad1, .ad2 {
-    flex: 1;
-    margin: 10px;
+    flex: 1; /* Faz com que os anúncios ocupem o espaço disponível igualmente */
+    margin: 10px; /* Adiciona uma margem de 10 pixels ao redor dos anúncios */
+    max-width: 400px; /* Define uma largura máxima de 400 pixels para os anúncios */
 }
 
-.ad1 h3, .ad2 h3 {
-    color: black;
-    margin-bottom: 10px; /* Espaço abaixo do título do anúncio */
-}
 
-/* Aqui ajustamos ambas as imagens para terem o mesmo tamanho fixo */
 .ad1 img, .ad2 img {
-    max-width: 400px;  /* Define uma largura fixa para ambas as imagens */
-    max-height: 400px; /* Define uma altura fixa para garantir que sejam do mesmo tamanho */
-    border-radius: 8px;
-    object-fit: cover; /* Garante que a imagem seja ajustada sem distorção */
+    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível do contêiner */
+    height: auto; /* Mantém a proporção original da imagem para evitar distorção */
+    max-width: 400px; /* Define uma largura máxima de 400 pixels para a imagem */
+    max-height: 400px; /* Define uma altura máxima de 400 pixels para a imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas com raio de 8 pixels à imagem */
+    object-fit: cover; /* Garante que a imagem cubra toda a área disponível sem distorção */
 }
-

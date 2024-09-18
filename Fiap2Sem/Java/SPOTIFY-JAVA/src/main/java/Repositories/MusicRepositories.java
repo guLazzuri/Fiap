@@ -86,7 +86,27 @@ public class MusicRepositories implements _CrudRepositorie<Music> {
 
     @Override
     public Optional<Music> GetById(int id) {
-        return Optional.empty();
+        Optional<Music> artist = Optional.empty();
+        try{
+            var conn = DatabeConfig.getConnection(); // 1- Registrar o driver, e fazer a conexão
+            var query = "SELECT * FROM ARTIST WHERE ID = ?"; // 2 - Criar o statement e definir a query
+            var stmt = conn.prepareStatement(query);
+            stmt.setInt(1, id); // 2.1 - Setar os valores, substituindo os ? da query
+            var rs = stmt.executeQuery(); // 3 - Executar a query
+            if(rs.next()){ // 4 - Iterar sobre o resultado
+                var _id = rs.getInt("ID");
+                var nome = rs.getString("NOME");
+                var preco = rs.getDouble("PRECO");
+            }
+            rs.close(); // 5 - Fechar o resultset
+            stmt.close(); // 6 - Fechar o statement
+            conn.close(); // 7 - Fechar a conexão
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return artist;
     }
 
     public List<Music> GetByName(String name){

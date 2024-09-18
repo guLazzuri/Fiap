@@ -7,13 +7,27 @@ public class Artist {
     private int id;
     private String name;
     private String genre;
-    private String ListMusic ;
+    private List<Music> ListMusic ;
 
-    public Artist( String name, String genre, String listMusic) {
+    public Artist() {
+    }
+
+    public Artist(int id, String name, String genre, List<Music> listMusic) {
         this.id = id;
         this.name = name;
         this.genre = genre;
-        this.ListMusic = listMusic;
+        ListMusic = listMusic;
+    }
+
+    public Artist(String name, String genre) {
+        this.name = name;
+        this.genre = genre;
+    }
+
+    public Artist(int id, String name, String genre) {
+        this.id = id;
+        this.name = name;
+        this.genre = genre;
     }
 
     public int getId() {
@@ -40,11 +54,11 @@ public class Artist {
         this.genre = genre;
     }
 
-    public String getListMusic() {
+    public List<Music> getListMusic() {
         return ListMusic;
     }
 
-    public void setListMusic(String listMusic) {
+    public void setListMusic(List<Music> listMusic) {
         ListMusic = listMusic;
     }
 
@@ -54,7 +68,7 @@ public class Artist {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", genre='" + genre + '\'' +
-                ", ListMusic='" + ListMusic + '\'' +
+                ", ListMusic=" + ListMusic +
                 '}';
     }
 }

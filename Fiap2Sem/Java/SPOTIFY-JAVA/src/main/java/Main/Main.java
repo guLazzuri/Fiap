@@ -8,10 +8,22 @@ public class Main {
 
         var artistRpositories = new ArtistRepositories();
 
-        //artistRpositories.Insert(new Artist("PEDRO", "pop"));
-        //artistRpositories.Delete(1);
-        //System.out.println(artistRpositories.GetById(1));
-        //System.out.println(artistRpositories.GetAll());
+        //var produto = new Produto(0, "Sprite", 5.5);
+        //produtoRespositorio.Insert(produto);
+
+        //artistRpositories.GetAll();
+        //produtos.forEach(System.out::println);
+
+        //System.out.println(artistRpositories.GetById(5));
+        // System.out.println(produto);
+
+//        artists = artistRpositories.GetByName("Spr");
+//        artists.forEach(System.out::println);
+        //artistRpositories.Delete(2);
+//
+//        artistRpositories.Insert(new Artist("Gustavo", "pop"));
+        artistRpositories.Delete(2);
+        System.out.println(artistRpositories.GetById(2));
 
     }
 }

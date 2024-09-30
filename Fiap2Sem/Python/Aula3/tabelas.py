@@ -1,3 +1,7 @@
+import os
+os.system("cls")
+
+
 def lista_tabela(t: list) -> None:
     for i in range(0, len(t), 1):
         print(f"Registro: {i+1}")

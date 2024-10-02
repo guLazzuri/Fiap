@@ -3,27 +3,33 @@ package Main;
 import Repositories.ArtistRepositories;
 import entities.Artist;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        var artistRepositories = new ArtistRepositories();
 
-        var artistRpositories = new ArtistRepositories();
+//        // Inserindo novos artistas
+//        artistRepositories.Insert(new Artist("Gustavo", "Pop"));
+//        artistRepositories.Insert(new Artist("Anitta", "Funk"));
+//        artistRepositories.Insert(new Artist("Caetano Veloso", "MPB"));
 
-        //var produto = new Produto(0, "Sprite", 5.5);
-        //produtoRespositorio.Insert(produto);
-
-        //artistRpositories.GetAll();
-        //produtos.forEach(System.out::println);
-
-        //System.out.println(artistRpositories.GetById(5));
-        // System.out.println(produto);
-
-//        artists = artistRpositories.GetByName("Spr");
+//        // Obtendo todos os artistas
+//        List<Artist> artists = artistRepositories.GetAll();
+//        System.out.println("Lista de artistas:");
 //        artists.forEach(System.out::println);
-        //artistRpositories.Delete(2);
-//
-//        artistRpositories.Insert(new Artist("Gustavo", "pop"));
-        artistRpositories.Delete(2);
-        System.out.println(artistRpositories.GetById(2));
 
+//        // Buscando um artista pelo ID
+//        System.out.println("\nArtista com ID 2:");
+//        System.out.println(artistRepositories.GetById(2).orElse(null));
+//
+//        // Atualizando um artista
+//        artistRepositories.Update(new Artist("Gustavo Lima", "Sertanejo"), 1);
+//
+//        // Removendo um artista
+//        artistRepositories.Delete(2);
+//        System.out.println("\nApós remover o artista com ID 2:");
+//        artists = artistRepositories.GetAll();
+//        artists.forEach(System.out::println);
     }
 }

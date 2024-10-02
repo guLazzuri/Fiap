@@ -3,78 +3,54 @@ package Repositories;
 import Infrastructure.DatabeConfig;
 import entities.Artist;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class ArtistRepositories implements _CrudRepositorie<Artist> {
+
     @Override
     public void Insert(Artist artist) {
-        try{
-            // 1- Registrar o driver, e fazer a conexão
-            var conn = DatabeConfig.getConnection();
-            // 2 - Criar o statement e definir a query
-            var query =
-                    "INSERT INTO ARTIST (NAME, GENRE) VALUES (?, ?)";
-            var stmt = conn.prepareStatement(query);
-            // 2.1 - Setar os valores, substituindo os ? da query
-            // eu nao posso só concatenar a query com os valores, pois isso pode ser um risco de segurança
-            // por causa do SQL Injection
-            stmt.setString(1,artist.getName());
-            stmt.setString(2, artist.getGenre());
+        String query = "INSERT INTO ARTIST (ID, NAME, GENRE) VALUES (artist_seq.NEXTVAL, ?, ?)";
+        try (Connection conn = DatabeConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            // 3 - Executar a query
+            stmt.setString(1, artist.getName());
+            stmt.setString(2, artist.getGenre());
             stmt.executeUpdate();
-            // 4 - Fechar o statement
-            stmt.close();
-            // 5 - Fechar a conexão
-            conn.close();
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-
     @Override
     public void Update(Artist artist, int id) {
-        try{
-            var conn = DatabeConfig.getConnection();
-            var query = "UPDATE PRODUTOS WHERE NAME = ?, SET GENRE = ?";
-            var stmt = conn.prepareStatement(query);
+        String query = "UPDATE ARTIST SET NAME = ?, GENRE = ? WHERE ID = ?";
+        try (Connection conn = DatabeConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
             stmt.setString(1, artist.getName());
             stmt.setString(2, artist.getGenre());
+            stmt.setInt(3, id);
             stmt.executeUpdate();
-            stmt.close();
-            conn.close();
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     @Override
     public void Delete(int id) {
-        try{
-            // 1- Registrar o driver, e fazer a conexão
-            var conn = DatabeConfig.getConnection();
-            // 2 - Criar o statement e definir a query
-            var query =
-                    "DELETE FROM ARTIST WHERE ID = ?";
-            var stmt = conn.prepareStatement(query);
-            // 2.1 - Setar os valores, substituindo os ? da query
-            // eu nao posso só concatenar a query com os valores, pois isso pode ser um risco de segurança
-            // por causa do SQL Injection
+        String query = "DELETE FROM ARTIST WHERE ID = ?";
+        try (Connection conn = DatabeConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
             stmt.setInt(1, id);
-            // 3 - Executar a query
             stmt.executeUpdate();
-            // 4 - Fechar o statement
-            stmt.close();
-            // 5 - Fechar a conexão
-            conn.close();
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -82,59 +58,41 @@ public class ArtistRepositories implements _CrudRepositorie<Artist> {
     @Override
     public Optional<Artist> GetById(int id) {
         Optional<Artist> artist = Optional.empty();
-        try{
-            var conn = DatabeConfig.getConnection(); // 1- Registrar o driver, e fazer a conexão
-            var query = "SELECT * FROM ARTIST WHERE ID = ?"; // 2 - Criar o statement e definir a query
-            var stmt = conn.prepareStatement(query);
-            stmt.setInt(1, id); // 2.1 - Setar os valores, substituindo os ? da query
-            var rs = stmt.executeQuery(); // 3 - Executar a query
-            if(rs.next()){ // 4 - Iterar sobre o resultado
-                var rsId = rs.getInt("ID");
-                var rsNome = rs.getString("NAME");
-                var rsGenre = rs.getString("GENRE");
+        String query = "SELECT * FROM ARTIST WHERE ID = ?";
+        try (Connection conn = DatabeConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int rsId = rs.getInt("ID");
+                String rsNome = rs.getString("NAME");
+                String rsGenre = rs.getString("GENRE");
                 artist = Optional.of(new Artist(rsId, rsNome, rsGenre));
             }
-            rs.close(); // 5 - Fechar o resultset
-            stmt.close(); // 6 - Fechar o statement
-            conn.close(); // 7 - Fechar a conexão
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return artist;
     }
-
 
     @Override
     public List<Artist> GetAll() {
         List<Artist> artists = new ArrayList<>();
-        try{
-            // 1- Registrar o driver, e fazer a conexão
-            var conn = DatabeConfig.getConnection();
-            // 2 - Criar o statement e definir a query
-            var query = "SELECT * FROM ARTIST ORDER BY ID";
-            var stmt = conn.prepareStatement(query);
-            // 3 - Executar a query
-            var rs = stmt.executeQuery();
-            // 4 - Iterar sobre o resultado
-            while (rs.next()){
-                var rsId = rs.getInt("ID");
-                var nome = rs.getString("NAME");
-                var genre = rs.getString("GENRE");
+        String query = "SELECT * FROM ARTIST ORDER BY ID";
+        try (Connection conn = DatabeConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                int rsId = rs.getInt("ID");
+                String nome = rs.getString("NAME");
+                String genre = rs.getString("GENRE");
                 artists.add(new Artist(rsId, nome, genre));
             }
-            // 5 - Fechar o resultset
-            rs.close();
-            // 6 - Fechar o statement
-            stmt.close();
-            // 7 - Fechar a conexão
-            conn.close();
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return artists;
     }
 }

@@ -16,3 +16,16 @@ Iniciando Sistema
 Iniciando Sistema
 Criando: Artista{nome='Eduardo', generoMusical='rock', ListaDeAlguns=[]} _EntidadeBase{id='94', excluido=false, publicando=false}
 Ler tudo: null
+Iniciando Sistema
+Iniciando Sistema
+Iniciando Sistema
+Iniciando Sistema
+Iniciando Sistema
+Iniciando Sistema
+Criando: Artista{nome='gU', generoMusical='POPO', ListaDeAlguns=[]} _EntidadeBase{id='1', excluido=false, publicando=false}
+Criando: Album{titulo='guSTAVO', anoDeLancamento='2024', artista='Gu', listaDeMusicas=[]} _EntidadeBase{id='1', excluido=false, publicando=false}
+Criando: Musica{titulo='kkk', album='gustvagsaf', duracao=2} _EntidadeBase{id='1', excluido=false, publicando=false}
+Ler tudo: null
+Iniciando Sistema
+Iniciando Sistema
+Iniciando Sistema

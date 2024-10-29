@@ -37,7 +37,7 @@ def criarCadastro():
             conn.commit()
             print("Cadastro realizado com sucesso!")
         else:
-            print("Erro: CPF já existe!")
+            print("Erro : CPF já existe!")
     except Exception as e:
         print("Erro: ", e)
 

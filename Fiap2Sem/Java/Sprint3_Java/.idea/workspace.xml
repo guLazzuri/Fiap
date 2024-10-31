@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29d3def-dbaa-4590-986e-4522214cb03f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/SPRINTPY/SPRINT.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/SPRINTPY/SPRINT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-End/next/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-End/next/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +71,8 @@
       <workItem from="1728905153305" duration="357000" />
       <workItem from="1728948065922" duration="6000" />
       <workItem from="1729617538684" duration="252000" />
+      <workItem from="1730408239083" duration="118000" />
+      <workItem from="1730408377958" duration="8000" />
     </task>
     <servers />
   </component>

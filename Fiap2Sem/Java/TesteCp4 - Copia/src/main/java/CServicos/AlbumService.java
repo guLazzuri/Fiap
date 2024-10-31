@@ -1,8 +1,13 @@
 package CServicos;
 
 
+import AEntidades.Album;
+import AEntidades.Musica;
 import Repositorio.AlbumRepositorio;
 import Utils.Validacao.ValidadorDeEntidade;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AlbumService {
     private AlbumRepositorio albumRepositorio;

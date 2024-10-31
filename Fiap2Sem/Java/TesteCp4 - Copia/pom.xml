@@ -15,7 +15,11 @@
     </properties>
 
     <dependencies>
-        <!-- Dependência Log4j -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>19.8.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -27,12 +31,17 @@
             <version>2.20.0</version> <!-- Versão mais recente -->
         </dependency>
 
+        <!-- Dependências do JAX-RS (Jersey) -->
         <dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>19.8.0.0</version>  <!-- Verifique a versão que você está usando -->
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet-core</artifactId>
+            <version>3.0.3</version> <!-- Use a versão mais recente disponível -->
         </dependency>
-
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>3.0.3</version> <!-- Para suporte a JSON -->
+        </dependency>
     </dependencies>
 
     <build>

@@ -16,9 +16,10 @@ const AuthContext = createContext<AuthContextProps>({} as AuthContextProps
 
 const AuthProvider = ({children}: {children:React.ReactNode})=>{
     return(
-        <AuthContext>
+        <AuthContext.Provider value={{ user: null, login: () => {}, logout: () => {} }}>
             {children}
-        </AuthContext>
+        </AuthContext.Provider>
     )
-
 }
+
+export { AuthProvider, AuthContext };

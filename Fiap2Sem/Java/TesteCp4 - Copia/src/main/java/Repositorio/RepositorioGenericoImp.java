@@ -43,9 +43,9 @@ public class RepositorioGenericoImp <T extends _EntidadeBase> implements Reposit
     }
 
     @Override
-    public void atualizarPorNome(String nome, T entidade) {
-
+    public void atualizarPorNome(String nome, T entidadeAtualizada) {
 
     }
+
 
 }
